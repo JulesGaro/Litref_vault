@@ -13,7 +13,7 @@ This vault meant to be simple in order to be easily customizable. Also it imply 
 
 ## Semantic scholar references builder
 
-Default zotero integration template integrate a codeblock replacing itself by the article references gathered through semantic scholar API if executed (too execute the codeblock swith to reading mode and mouseover the codeblock to see the 'Run' button).
+Default zotero integration template integrate a codeblock replacing itself by the article references gathered through semantic scholar API if executed (to execute the codeblock swith to reading mode and mouseover the codeblock to see the 'Run' button).
 
 Changes related to path in order to make this work is indicated in the codeblock section int the CreateArticleNote template.
 
