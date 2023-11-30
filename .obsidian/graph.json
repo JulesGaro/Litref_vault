@@ -1,0 +1,37 @@
+{
+  "collapse-filter": false,
+  "search": "",
+  "showTags": true,
+  "showAttachments": false,
+  "hideUnresolved": true,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [
+    {
+      "query": "[\"type\":\"literature-note\"]",
+      "color": {
+        "a": 1,
+        "rgb": 16711680
+      }
+    },
+    {
+      "query": "[\"type\":\"project-note\"]",
+      "color": {
+        "a": 1,
+        "rgb": 34047
+      }
+    }
+  ],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": -1.8,
+  "nodeSizeMultiplier": 1.37604166666667,
+  "lineSizeMultiplier": 0.6359375,
+  "collapse-forces": true,
+  "centerStrength": 0.510416666666667,
+  "repelStrength": 12.3958333333333,
+  "linkStrength": 0.270833333333333,
+  "linkDistance": 439,
+  "scale": 0.2938385938237446,
+  "close": true
+}

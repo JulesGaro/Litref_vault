@@ -1,0 +1,33 @@
+{
+  "database": "Zotero",
+  "noteImportFolder": "Imported_notes",
+  "pdfExportImageDPI": 120,
+  "pdfExportImageFormat": "jpg",
+  "pdfExportImageQuality": 90,
+  "citeFormats": [
+    {
+      "name": "Format #2",
+      "format": "formatted-citation"
+    },
+    {
+      "name": "Cite",
+      "format": "formatted-citation",
+      "cslStyle": "nature",
+      "brackets": false
+    }
+  ],
+  "exportFormats": [
+    {
+      "name": "Article note",
+      "outputPathTemplate": "Article_note/{{title}}.md",
+      "imageOutputPathTemplate": "Media/zotero_images/{{citekey}}/",
+      "imageBaseNameTemplate": "{{citekey}}",
+      "templatePath": "Templates/CreateArticleNote.md",
+      "cslStyle": "nature"
+    }
+  ],
+  "citeSuggestTemplate": "[[{{citekey}}]]",
+  "openNoteAfterImport": false,
+  "whichNotesToOpenAfterImport": "first-imported-note",
+  "shouldConcat": true
+}

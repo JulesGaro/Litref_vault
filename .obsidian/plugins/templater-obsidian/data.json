@@ -1,0 +1,33 @@
+{
+  "command_timeout": 5,
+  "templates_folder": "Templates",
+  "templates_pairs": [
+    [
+      "please",
+      "echo \"aled\""
+    ],
+    [
+      "bidule",
+      "python3 /home/jules/Documents/phd/obsidian_vault/.obsidian/scripts/python/test.py"
+    ]
+  ],
+  "trigger_on_file_creation": true,
+  "auto_jump_to_cursor": false,
+  "enable_system_commands": true,
+  "shell_path": "/usr/bin/bash",
+  "user_scripts_folder": "",
+  "enable_folder_templates": true,
+  "folder_templates": [
+    {
+      "folder": "Article_note",
+      "template": "Templates/CreateArticleReferences.md"
+    }
+  ],
+  "syntax_highlighting": true,
+  "syntax_highlighting_mobile": false,
+  "enabled_templates_hotkeys": [
+    "Templates/InitNoteCreation.md"
+  ],
+  "startup_templates": [],
+  "enable_ribbon_icon": true
+}

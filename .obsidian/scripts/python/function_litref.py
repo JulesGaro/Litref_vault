@@ -3,22 +3,42 @@ import json
 import os
 
 
-def get_files_in_folder(folder_path):
+def parse_frontmatter(frontmatter_string):
     """
-    Returns the names of files inside a specific folder as a list.
+    Parses the frontmatter of a note and returns a dictionary of the frontmatter.
 
     Args:
-    folder_path (str): The path to the folder.
+    frontmatter_string (str): The frontmatter of a note.
 
     Returns:
-    list: The names of files inside the folder.
+    dict: The frontmatter of a note as a dictionary.
     """
-    file_names = []
-    for file_name in os.listdir(folder_path):
-        if os.path.isfile(os.path.join(folder_path, file_name)):
-            file_names.append(file_name)
-    return file_names
+    frontmatter = {}
+    for line in [line for line in frontmatter_string.split("\n") if line != ""]:
+        key, value = line.split(": ")
+        if "," in value:
+            value = value.split(",")
+        frontmatter[key] = value
+    
+    return frontmatter
 
+def get_frontmatter_article_title(note_path):
+    """
+    Returns the title of a note based on the .md frontmatter
+
+    Args:
+    note_path (str): The path to the note.
+
+    Returns:
+    str: The title of the note.
+    """
+    with open(note_path, "r") as f:
+        note = f.read()
+        frontmatter = parse_frontmatter(note.split("---")[1])
+    try:
+        return frontmatter["title"]
+    except(KeyError):
+        raise(KeyError("No 'title' key found in frontmatter, you can add it to your template by adding 'title: {{title}}' in the frontmatter part"))
 
 def query_api(url):
     """
@@ -54,24 +74,6 @@ def get_paper_id(title):
     # try catch error due to connection/api error
     return query["data"][0]["paperId"]
 
-def get_vault_paper_ids(path):
-    """
-    Retrieves the paper IDs for the papers in a specified folder.
-
-    Args:
-    path (str): The path to the folder containing the papers.
-
-    Returns:
-    list: The paper IDs.
-    """
-    paper_titles = get_files_in_folder(path)
-    paper_ids = []
-    for paper in paper_titles:
-        query = search_by_title(paper)
-        paper_ids.append(get_paper_id(paper))
-    
-    return paper_ids
-
 def get_paper_info(paper_id):
     """
     Retrieves the paper information for a specified paper ID.
@@ -92,29 +94,5 @@ def get_reference_titles(title):
     return [reference["title"] for reference in paper_info["references"]]
 
 def format_ref(references):
-    references = [f" - [[{reference}]]" for reference in references]
+    references = [f" - [[{reference}]]".replace(":"," -") for reference in references]
     return "\n".join(references)
-
-def add_references(title,vault_path):
-    note_path = os.path.join(vault_path, title)
-    with open(note_path, "r") as f:
-        note = f.read()
-            
-    if not "# References" in note:
-        note += "\n# References\n"
-    else:
-        index = note.find("# References")
-        if index != -1:
-            note = note[:index + len("# References")]
-    
-    references = get_reference_titles(title)
-    references = format_ref(references)
-
-    note += references
-
-    with open(note_path, "w") as f:
-        f.write(note)
-
-
-def build_vault_references():
-    pass

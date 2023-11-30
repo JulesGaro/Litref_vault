@@ -1,0 +1,8 @@
+{
+  "areFoldersHidden": true,
+  "matchCaseInsensitive": true,
+  "attachmentFolderNames": [
+    "attachments",
+    "last_pending_note"
+  ]
+}
