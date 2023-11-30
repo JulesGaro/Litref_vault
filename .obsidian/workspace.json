@@ -13,18 +13,10 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md",
-                "mode": "preview",
+                "file": "Project_note/Our vault.md",
+                "mode": "source",
                 "source": true
               }
-            }
-          },
-          {
-            "id": "9c8f393750c8d71b",
-            "type": "leaf",
-            "state": {
-              "type": "graph",
-              "state": {}
             }
           }
         ]
@@ -93,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md",
+                "file": "Project_note/Our vault.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -110,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md",
+                "file": "Project_note/Our vault.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -133,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md"
+                "file": "Project_note/Our vault.md"
               }
             }
           }
@@ -155,14 +147,21 @@
       "command-palette:Open command palette": false,
       "templater-obsidian:Templater": false,
       "table-editor-obsidian:Advanced Tables Toolbar": false,
-      "hide-folders:Show hidden folders": false,
-      "cmdr:Commander: Better import Zotero": false
+      "hide-folders:Show hidden folders": false
     }
   },
-  "active": "507514302bac9e61",
+  "active": "cce302877aa5d685",
   "lastOpenFiles": [
-    "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md",
+    "Project_note/Our vault.md",
+    "Dashboard.md",
     "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+    "Media/imported_images/our_vault.png",
+    "Media/imported_images/Capture d’écran du 2023-11-30 14-17-31.png",
+    "Media/Capture d’écran du 2023-11-30 14-17-31.png",
+    "Media/zotero_images/gaiteriModulesHubsPotential2014/gaiteriModulesHubsPotential2014-3-x58-y453.png",
+    "Media/zotero_images/gaiteriModulesHubsPotential2014/gaiteriModulesHubsPotential2014-2-x298-y493.png",
+    "Media/zotero_images/gaiteriModulesHubsPotential2014",
+    "Article_note/Analysis of Shared Genetic Regulatory Networks for Alzheimer’s Disease and Epilepsy.md",
     "Article_note/Comprehensive evaluation of deconvolution methods for human brain gene expression.md",
     "Article_note/Determining cell type abundance and expression from bulk tissues with digital cytometry.md",
     "Article_note/Guidance for RNA-seq co-expression network construction and analysis - safety in numbers.md",
@@ -190,8 +189,6 @@
     "Article_noteundefined.md",
     "Imported_notes",
     "Article_note/Y.md",
-    "Article_note/LEEEEEEZGO.md",
-    "Templates/InitNoteCreation.md",
     "Article_note/Untitled",
     "Article_note/Article_references",
     "Article_note2",
@@ -199,13 +196,7 @@
     "Media/imported_images/plot_20_11_2023_C.png",
     "Media/imported_images/plot_20_11_2023_B.png",
     "Media/imported_images/plot_20_11_2023_A.png",
-    "Long_note/Long_note__Minimal gene set discovery in single-cell mRNA-seq datasets with ActiveSVM.txt",
     "Media/zotero_images/lardenoisSinglecellTranscriptomeLandscape2023/lardenoisSinglecellTranscriptomeLandscape2023-20-x66-y527.png",
-    "Media/zotero_images/newmanDeterminingCellType2019/newmanDeterminingCellType2019-23-x91-y343.png",
-    "Media/zotero_images/harrisSinglecellCoexpressionAnalysis2021/harrisSinglecellCoexpressionAnalysis2021-3-x47-y341.png",
-    "Media/zotero_images/harrisSinglecellCoexpressionAnalysis2021/harrisSinglecellCoexpressionAnalysis2021-3-x325-y533.png",
-    "Media/zotero_images/langfelderWGCNAPackageWeighted2008/langfelderWGCNAPackageWeighted2008-5-x55-y118.png",
-    "Media/zotero_images/gaiteriModulesHubsPotential2014/gaiteriModulesHubsPotential2014-3-x58-y453.png",
-    "Media/zotero_images/gaiteriModulesHubsPotential2014/gaiteriModulesHubsPotential2014-2-x298-y493.png"
+    "Media/zotero_images/newmanDeterminingCellType2019/newmanDeterminingCellType2019-23-x91-y343.png"
   ]
 }
