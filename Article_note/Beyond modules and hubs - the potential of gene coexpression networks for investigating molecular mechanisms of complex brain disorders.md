@@ -1,10 +1,16 @@
 ---
 type: literature-note
 title: Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders
-authors: C. Gaiteri, Y. Ding, B. French, G. C. Tseng, E. Sibille,
+authors: 
+ -  C. Gaiteri 
+ -  Y. Ding 
+ -  B. French 
+ -  G. C. Tseng 
+ -  E. Sibille
 journal: Genes, Brain and Behavior
-tags: co-expression, neurological disorders, network, review, 📗, ⭐, regulation, differential co-expression, 📚
+tags: co-expression, neurological disorders, network, review, ⭐, regulation, differential co-expression, 📚
 citekey: gaiteriModulesHubsPotential2014
+creationdate: 08-01-2024
 ---
 # Beyond modules and hubs: the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders
 ```table-of-contents
@@ -97,15 +103,19 @@ Good figure to pictures the different sources of variation leading to a potentia
 %% begin references %%
 ## References
 %% references anchor %%
+Run that code block to build references, it might take a bit of time and a refresh of the note
 ```shell
+# Add here a link to a file text containing your semantic scholar API key
+# !!!!!! DON'T SHARE THAT WITH PEOPLE !!!!!!
+apikey=`cat your/apikey/file/location`
 # Change the path to the path to be the absolute path to your vault
-vault_path="/home/jules/Documents/phd/obsidian_vault/"
+vault_path="/home/our/Documents/somewhere/obsidian_vault/"
 #Change that path to be the relative path from your vault root to the folder you store zotero imported literature notes
 lit_note_path_from_vault="Article_note/"
 cd $vault_path
 # Change the script to match the naming pattern of yout note,
 # You can refer to how they are named in the zotero integration plugin # settings for that template
-python3 .obsidian/scripts/python/buildReferences.py "Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md"
+python3 .obsidian/scripts/python/buildReferences.py "Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md" --apikey "$apikey"
 
 ```
 %% references anchor %%

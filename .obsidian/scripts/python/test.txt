@@ -1,5 +1,0 @@
----
-type: truc
-machin: bidules,chouette
----
-

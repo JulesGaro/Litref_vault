@@ -1,16 +1,7 @@
 {
   "command_timeout": 5,
-  "templates_folder": "Templates",
-  "templates_pairs": [
-    [
-      "please",
-      "echo \"aled\""
-    ],
-    [
-      "bidule",
-      "python3 /home/jules/Documents/phd/obsidian_vault/.obsidian/scripts/python/test.py"
-    ]
-  ],
+  "templates_folder": "",
+  "templates_pairs": [],
   "trigger_on_file_creation": true,
   "auto_jump_to_cursor": false,
   "enable_system_commands": true,
@@ -21,6 +12,10 @@
     {
       "folder": "Article_note",
       "template": "Templates/CreateArticleReferences.md"
+    },
+    {
+      "folder": "Project_note",
+      "template": "Templates/CreateProjectNote.md"
     }
   ],
   "syntax_highlighting": true,

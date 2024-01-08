@@ -144,7 +144,7 @@
     --h6-color: var(--header-purple);
 
     --h1-size: 2.125em;
-    --h2-size: 1.625em;
+    --h2-size: 1.800em;
     --h3-size: 1.375em;
     --h4-size: 1.250em;
     --h5-size: 1.125em;
@@ -157,10 +157,10 @@
     --h5-line-height: 1.5;
     --h6-line-height: 1.5;
 
-    --h1-weight: 500;
-    --h2-weight: 500;
-    --h3-weight: 500;
-    --h4-weight: 500;
+    --h1-weight: 700;
+    --h2-weight: 650;
+    --h3-weight: 600;
+    --h4-weight: 550;
     --h5-weight: 500;
     --h6-weight: 500;
 }

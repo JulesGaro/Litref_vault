@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Project_note/Our vault.md",
+                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Project_note/Our vault.md",
+                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Project_note/Our vault.md",
+                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Project_note/Our vault.md"
+                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md"
               }
             }
           }
@@ -152,9 +152,12 @@
   },
   "active": "cce302877aa5d685",
   "lastOpenFiles": [
-    "Project_note/Our vault.md",
-    "Dashboard.md",
+    "Templates/CreateProjectNote.md",
+    "Project_note/azd.md",
+    "Templates/CreateArticleNote.md",
     "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+    "Dashboard.md",
+    "Project_note/Our vault.md",
     "Media/imported_images/our_vault.png",
     "Media/imported_images/Capture d’écran du 2023-11-30 14-17-31.png",
     "Media/Capture d’écran du 2023-11-30 14-17-31.png",
@@ -175,7 +178,6 @@
     "Article_note/Spatial and cell type transcriptional landscape of human cerebellar development.md",
     "Article_note/Transcriptomic signatures of neuronal differentiation and their association with risk genes for autism spectrum and related neuropsychiatric disorders.md",
     "Article_note/WGCNA - an R package for weighted correlation network analysis.md",
-    "Templates/CreateArticleNote.md",
     "Templates/CreateArticleNote 1.md",
     "Templates/CreateArticleReferences.md",
     "last_pending_note/LoadingArticleNote.md",
@@ -186,9 +188,7 @@
     "Article_note/test.md",
     "Imported_notes/youModelingGroupHeteroscedasticity2023.md",
     "Article_note/test",
-    "Article_noteundefined.md",
     "Imported_notes",
-    "Article_note/Y.md",
     "Article_note/Untitled",
     "Article_note/Article_references",
     "Article_note2",

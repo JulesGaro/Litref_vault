@@ -1,10 +1,11 @@
 ---
 type: literature-note
 title: {{ title | replace(":", " -") }}
-authors:{%- for creator in creators %} {%- if creator.name == null %} {{creator.firstName}} {{creator.lastName}}, {%- endif -%} {%- if creator.name %}{{creator.creatorType | capitalize}}:: {{creator.name}}{%- endif -%}{%- endfor %}
+authors:{%- for creator in creators %} {%- if creator.name == null %} {{"\n - "}} {{creator.firstName}} {{creator.lastName}} {%- endif -%} {%- if creator.name %}{{creator.creatorType | capitalize}}:: {{creator.name}}{%- endif -%}{%- endfor %}
 journal: {{publicationTitle}}
 tags: {% if allTags %}{{allTags}}{% else %}no_tags{% endif %}
 citekey: {{citekey}}
+creationdate: {{exportDate |format("DD-MM-YYYY")}}
 ---
 # {{title}}
 ```table-of-contents
@@ -108,14 +109,17 @@ Article by *{% for creator in creators %}{% if loop.first %}{{creator.lastName}}
 ## References
 %% references anchor %%
 ```shell
+# Add here a link to a file text containing your semantic scholar API key
+# !!!!!! DON'T SHARE THAT WITH PEOPLE !!!!!!
+apikey=`cat your/apikey/file/location`
 # Change the path to the path to be the absolute path to your vault
-vault_path="/home/jules/Documents/phd/obsidian_vault/"
+vault_path="/home/our/Documents/somewhere/obsidian_vault/"
 #Change that path to be the relative path from your vault root to the folder you store zotero imported literature notes
 lit_note_path_from_vault="Article_note/"
 cd $vault_path
 # Change the script to match the naming pattern of yout note,
 # You can refer to how they are named in the zotero integration plugin # settings for that template
-python3 .obsidian/scripts/python/buildReferences.py "{{ title | replace(":", " -") }}.md"
+python3 .obsidian/scripts/python/buildReferences.py "{{ title | replace(":", " -") }}.md" --apikey "$apikey"
 
 ```
 %% references anchor %%
