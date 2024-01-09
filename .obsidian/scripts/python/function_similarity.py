@@ -9,6 +9,10 @@ def calculate_jaccard_similarity(str1, str2):
 def similar_name(str1, str2, threshold=0.7):
     str1 = str1.replace("′", "'")
     str1 = str1.replace(":", " -")
+    if str1[-1] == ".":
+        str1 = str1[:-1]
+    if str2[-1] == ".":
+        str2 = str2[:-1]
     str2 = str2.replace("′", "'")
     str2 = str2.replace(":", " -")
     similarity = calculate_jaccard_similarity(str1, str2)
@@ -18,6 +22,10 @@ def similar_name(str1, str2, threshold=0.7):
 def same_name(str1, str2):
     str1 = str1.replace("′", "'")
     str1 = str1.replace(":", " -")
+    if str1[-1] == ".":
+        str1 = str1[:-1]
+    if str2[-1] == ".":
+        str2 = str2[:-1]
     str2 = str2.replace("′", "'")
     str2 = str2.replace(":", " -")
     

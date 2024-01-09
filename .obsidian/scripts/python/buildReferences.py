@@ -1,6 +1,8 @@
-import function_litref as fct
 import argparse
+
 from time import sleep
+
+import function_litref as fct
 
 # limitations are:
 #     - semantic scholar sometimes don't have the paper in a good version with proper metadata
@@ -14,12 +16,12 @@ parser.add_argument("note_file", help="Title of the note")
 parser.add_argument("--apikey", help="API key")
 args = parser.parse_args()
 
-def buildReferences(API_request = 0):
+def build_references(api_requests = 0):
     """
     Builds references in an Obsidian note using the provided API request.
 
     Args:
-        API_request (int): The number of API requests made (default is 0).
+        api_requests (int): The number of API requests made (default is 0).
 
     Returns:
         int: 1 if successful.
@@ -40,24 +42,25 @@ def buildReferences(API_request = 0):
         # for each reference
         references = fct.get_formated_refs(references_ids,apikey)
 
-    except(fct.APIError):
-        if API_request < 5:
+    except fct.APIError as exc:
+        if api_requests < 5:
             sleep(2)
-            buildReferences(API_request = API_request + 1)
+            build_references(api_requests = api_requests + 1)
             return 1
         else:
-            raise(fct.APIError)
+            raise exc
 
     # write down the references in the Obsidian note using the template
     # Anchors
-    with open(f"Article_note/{note_file}", "r") as f:
+    with open(f"Article_note/{note_file}", "r", encoding = "UTF-8") as f:
         content = f.read()
         above_ref = content.split("%% references anchor %%")[0]
         below_ref = content.split("%% references anchor %%")[2]
 
     new_content = above_ref + references + below_ref
-    with open(f"Article_note/{note_file}", "w") as f:
+    with open(f"Article_note/{note_file}", "w", encoding = "UTF-8") as f:
         f.write(new_content)
-    
+    return 1
+
 if __name__ == "__main__":
-    buildReferences()
+    build_references()
