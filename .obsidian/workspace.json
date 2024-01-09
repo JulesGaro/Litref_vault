@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+                "file": "Templates/CreateProjectNote.md",
                 "mode": "source",
                 "source": true
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+                "file": "Templates/CreateProjectNote.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+                "file": "Templates/CreateProjectNote.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md"
+                "file": "Templates/CreateProjectNote.md"
               }
             }
           }
@@ -139,6 +139,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "webpage-html-export:Export Vault to HTML": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -152,12 +153,13 @@
   },
   "active": "cce302877aa5d685",
   "lastOpenFiles": [
-    "Templates/CreateProjectNote.md",
-    "Project_note/azd.md",
     "Templates/CreateArticleNote.md",
-    "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
-    "Dashboard.md",
     "Project_note/Our vault.md",
+    "Templates/CreateProjectNote.md",
+    "Article_note/Transcriptomic analysis of autistic brain reveals convergent molecular pathology.md",
+    "Article_note/Beyond modules and hubs - the potential of gene coexpression networks for investigating molecular mechanisms of complex brain disorders.md",
+    "Project_note/azd.md",
+    "Dashboard.md",
     "Media/imported_images/our_vault.png",
     "Media/imported_images/Capture d’écran du 2023-11-30 14-17-31.png",
     "Media/Capture d’écran du 2023-11-30 14-17-31.png",
@@ -186,7 +188,6 @@
     "last_pending_note/killthatrunningprocessplease",
     "Old_Article_notes",
     "Article_note/test.md",
-    "Imported_notes/youModelingGroupHeteroscedasticity2023.md",
     "Article_note/test",
     "Imported_notes",
     "Article_note/Untitled",

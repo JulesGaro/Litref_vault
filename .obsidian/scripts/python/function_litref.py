@@ -5,6 +5,11 @@ from time import time,sleep
 
 import function_similarity as sim
 
+class APIError(Exception):
+    """A custom exception class."""
+    def __init__(self, message="API request fail, check your internet connexion"):
+        self.message = message
+        super().__init__(self.message)
 
 def get_frontmatter_article_title(note_path):
     """
@@ -35,7 +40,11 @@ def query_api(url,apikey):
     Returns:
     dict: The response from the API in JSON format.
     """
+
     response = requests.get(url,headers={'X-API-KEY':apikey})
+    if "message" in response:
+        if response["message"] == 'Too Many Requests. Please wait and try again or apply for a key for higher rate limits. https://www.semanticscholar.org/product/api#api-key-form':
+            raise APIError
     return response.json()
 
 
@@ -65,11 +74,11 @@ def get_paper_id(title,apikey,restrict_name=True):
         str: The paper ID corresponding to the given title.
     """
     query = search_by_title(title,apikey)
-    # try catch error due to connection/api error
-    
-    paper_id = get_proper_paperId(title,query,apikey,restrict_name)
-
-    return paper_id
+    if query == {'total': 0, 'offset': 0}:
+        return None
+    else:
+        paper_id = get_proper_paperId(title,query,apikey,restrict_name)
+        return paper_id
 
 def get_proper_paperId(title, query, apikey, restrict_name):
     """
@@ -106,7 +115,7 @@ def get_proper_paperId(title, query, apikey, restrict_name):
 
         paper = query_api(url, apikey)
 
-        same_title = paper["title"] == title
+        same_title = sim.same_name(paper["title"],title)
         # check for:
         #   - authors being referenced
         #   - paper have references
@@ -148,7 +157,6 @@ def get_proper_references(titles, apikey):
     Returns:
         list: A list of reference IDs corresponding to the given titles.
     """
-    titles = list(set(titles))  # Remove duplicates
     ref_ids = []
     clock = time()
     request = 0
@@ -177,7 +185,7 @@ def get_reference_ids(title,apikey):
     paper_id = get_paper_id(title,apikey)
     url = f"https://api.semanticscholar.org/graph/v1/paper/{paper_id}?fields=title,references"
     query = query_api(url,apikey)
-    ref_titles = [reference["title"] for reference in query["references"] if reference["title"] is not None]
+    ref_titles = list(set([reference["title"] for reference in query["references"] if reference["title"] is not None]))
     ref_ids = get_proper_references(ref_titles,apikey)
     return [ref_id for ref_id in ref_ids if ref_id is not None]
 

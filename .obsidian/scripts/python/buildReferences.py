@@ -40,13 +40,13 @@ def buildReferences(API_request = 0):
         # for each reference
         references = fct.get_formated_refs(references_ids,apikey)
 
-    except(KeyError):
+    except(fct.APIError):
         if API_request < 5:
             sleep(2)
             buildReferences(API_request = API_request + 1)
             return 1
         else:
-            raise(KeyError("API request failed,check your internet connexion"))
+            raise(fct.APIError)
 
     # write down the references in the Obsidian note using the template
     # Anchors
